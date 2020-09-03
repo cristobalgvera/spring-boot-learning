@@ -1,0 +1,22 @@
+# Try to avoid use tab to indent, use spaces instead. That's because tab's spaces can be different between different PCs
+
+app:
+  name: myApp
+  description: Welcome to ${app.name}
+
+my:
+  greetings: Hello World!
+  list:
+    values: One,Two,Three
+
+db:
+  connection: "{url: 'http://connection-url', username: 'foo', password: 'bar'}"
+  host: 127.0.0.1
+  port: 1200
+
+management.endpoints.web.exposure.include: "*"
+
+# You can set lot of active profiles. Each one will override properties if is necessary. Default profile always is active.
+# Only needs to change properties that you want to specifically use.
+# Also, you can set activation of Java Beans on function of active profile via '@Profile("profile-name")' above the bean itself.
+spring.profiles.active: test,qa

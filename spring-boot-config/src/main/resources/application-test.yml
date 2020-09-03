@@ -1,0 +1,12 @@
+# Convention to create new profiles is: 'application-<profile-name>.extension'
+
+app:
+  name: myApp
+  description: Welcome to ${app.name}
+
+db:
+  connection: "{url: 'test-connection-url', username: 'test-foo', password: 'test-bar'}"
+  host: 129.0.0.1
+  port: 2400
+
+management.endpoints.web.exposure.include: "*"

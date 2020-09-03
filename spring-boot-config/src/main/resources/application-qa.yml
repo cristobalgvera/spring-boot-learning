@@ -1,0 +1,9 @@
+# Convention to create new profiles is: 'application-<profile-name>.extension'
+
+app:
+  name: daApp
+  description: So, you are in of ${app.name}
+
+my:
+  list:
+    values: One,Two,Three,Four,Five,Six

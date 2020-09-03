@@ -13,7 +13,7 @@ import java.util.Map;
 @RestController
 public class GreetingController {
 
-    // Setting value from application.properties
+    // Setting value from application.yml
     @Value("${my.greetings}")
     private String greetingMessage;
 
@@ -41,7 +41,7 @@ public class GreetingController {
     @GetMapping("/greeting")
     public String greeting() {
         String separator = " || ";
-        // To show application.properties defined variables
+        // To show application.yml defined variables
         StringBuilder stringBuilder = new StringBuilder(greetingMessage + ", " + appDescription.toLowerCase() + separator);
 
         // To show default value variable
@@ -50,12 +50,12 @@ public class GreetingController {
         // To show static message
         stringBuilder.append("Static message: " + staticMessage + separator);
 
-        // To show list defined in application.properties
+        // To show list defined in application.yml
         stringBuilder.append("This will be the list writed in properties: ");
         propertiesList.forEach(value -> stringBuilder.append("- " + value + ". "));
         stringBuilder.append("Number of elements: " + propertiesList.size() + separator);
 
-        //To show map defined on application.properties
+        //To show map defined on application.yml
         stringBuilder.append("Database values: ");
         databaseValues.forEach((k,v) -> stringBuilder.append("- " + k + ":" + v + " "));
 
